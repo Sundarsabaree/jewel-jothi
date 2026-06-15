@@ -4,34 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jewel Jothi Tech - Home</title>
-    <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="mystyle.css">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="mystyle.css">
 </head>
 
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- ===== NAVBAR ===== -->
     <nav>
         <h1>Jewel Jothi Tech</h1>
-
         <ul>
-            <li><a href="home.html">Home</a></li>
-
-            <li><a href="about.html">About</a></li>
-
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
             <li class="dropdown">
                 <a href="#" onclick="toggleMenu(event)">
-                    Services
-                    <i class="fa-solid fa-chevron-down" id="arrow"></i>
+                    Services <i class="fa-solid fa-chevron-down" id="arrow"></i>
                 </a>
-
                 <ul class="dropdown-menu" id="servicesMenu">
                     <li><a href="#">SEO</a></li>
                     <li><a href="#">SMM</a></li>
@@ -39,116 +31,281 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
                     <li><a href="#">Web Development</a></li>
                 </ul>
             </li>
-
-            <li><a href="courses.html">Courses</a></li>
-
-            <li><a href="product.html">Product</a></li>
-
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="home">
+        <h2>Grow Your Business With <span>Digital Marketing</span></h2>
+        <p>Digital Marketing & Performance Marketing Agency</p>
+        <div class="hero-buttons">
+            <a href="#contact" class="btn-primary">Get Started</a>
+            <a href="#about" class="btn-outline">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Scroll Down -->
     <div class="scroll-down">
         <span>Scroll Down</span>
         <i class="fa-solid fa-arrow-down"></i>
     </div>
-    <!-- Hero Section -->
-    <section>
-        <h2>Grow Your Business With Digital Marketing</h2>
 
-        <p>
-            Digital Marketing & Performance Marketing Agency
-        </p>
-
-    </section>
+    <!-- ===== TICKER ===== -->
     <div class="ticker">
         <div class="ticker-content">
-            JEWEL JOTHI TECH • DIGITAL MARKETING • SEO • SMM • GOOGLE ADS • WEBSITE DEVELOPMENT • ANALYTICS •
+            JEWEL JOTHI TECH &bull; DIGITAL MARKETING &bull; SEO &bull; SMM &bull; GOOGLE ADS &bull; WEBSITE DEVELOPMENT &bull; ANALYTICS &bull;
+            JEWEL JOTHI TECH &bull; DIGITAL MARKETING &bull; SEO &bull; SMM &bull; GOOGLE ADS &bull; WEBSITE DEVELOPMENT &bull; ANALYTICS &bull;
         </div>
     </div>
 
+    <!-- ===== WHAT DIFFERENTIATES ===== -->
+    <section class="different-section">
+        <div class="left-panel">
+            <h1>What Differentiates</h1>
+            <h2>Jewel Jothi Tech?</h2>
+            <p>We help businesses grow through innovative digital marketing strategies, creative solutions, and measurable results. A few differentiating aspects of our company are listed below.</p>
+            <img src="image/Image1.jpg" alt="About Us">
+        </div>
+        <div class="right-panel">
+            <div class="point">
+                <span>&#10003;</span>
+                <p>We help businesses grow their online presence and attract more customers through result-driven marketing.</p>
+            </div>
+            <div class="point">
+                <span>&#10003;</span>
+                <p>We provide SEO, Social Media Marketing, Google Ads, and Website Development services under one roof.</p>
+            </div>
+            <div class="point">
+                <span>&#10003;</span>
+                <p>We believe in transparency, quality service, and measurable results for every project.</p>
+            </div>
+            <div class="point">
+                <span>&#10003;</span>
+                <p>We build long-term partnerships by helping clients achieve sustainable growth.</p>
+            </div>
+            <div class="point">
+                <span>&#10003;</span>
+                <p>Our team is always available to provide support, updates, and guidance.</p>
+            </div>
+            <div class="point">
+                <span>&#10003;</span>
+                <p>We combine creativity, technology, and analytics to maximize business performance.</p>
+            </div>
+        </div>
+    </section>
 
-    <!-- JavaScript -->
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about">
+        <p class="section-label">Who We Are</p>
+        <h2 class="section-title">About Us</h2>
+        <p class="section-subtitle">Your trusted digital growth partner</p>
+
+        <p class="about-intro">
+            Jewel Jothi Tech is a full-service digital marketing agency focused on helping businesses grow in the digital world.
+            We provide comprehensive solutions including SEO, Social Media Marketing, Paid Advertising, Website Development,
+            Graphic Design, and Data Analytics. Our mission is to empower businesses with innovative marketing strategies that
+            enhance brand visibility, generate quality leads, and drive sustainable growth. Whether you are a startup, small
+            business, or established enterprise, we are committed to helping you reach your highest potential.
+        </p>
+
+        <!-- Stats -->
+        <div class="stats-row">
+            <div class="stat-box">
+                <h3>150+</h3>
+                <p>Clients Served</p>
+            </div>
+            <div class="stat-box">
+                <h3>5+</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-box">
+                <h3>98%</h3>
+                <p>Client Satisfaction</p>
+            </div>
+            <div class="stat-box">
+                <h3>300+</h3>
+                <p>Projects Done</p>
+            </div>
+        </div>
+
+        <!-- Services Grid -->
+        <p class="section-label">What We Offer</p>
+        <h2 class="section-title">Our Services</h2>
+        <br>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                <h4>SEO</h4>
+                <p>Rank higher on search engines and drive organic traffic to your website.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-share-nodes"></i>
+                <h4>Social Media Marketing</h4>
+                <p>Build your brand presence across all major social platforms.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-brands fa-google"></i>
+                <h4>Google Ads</h4>
+                <p>Targeted paid campaigns that bring instant traffic and leads.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-code"></i>
+                <h4>Web Development</h4>
+                <p>Fast, responsive, and modern websites built to convert visitors.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact">
+        <p class="section-label">Get In Touch</p>
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">We'd love to hear from you. Send us a message!</p>
+
+        <div class="contact-wrapper">
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h3>Let's Work Together</h3>
+                <p>Ready to take your business to the next level? Reach out to us and we'll get back to you within 24 hours.</p>
+
+                <div class="contact-detail">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Tamil Nadu, India</span>
+                </div>
+                <div class="contact-detail">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 98765 43210</span>
+                </div>
+                <div class="contact-detail">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>hello@jeweljothitech.com</span>
+                </div>
+                <div class="contact-detail">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>Mon – Sat: 9:00 AM – 6:00 PM</span>
+                </div>
+
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" id="firstName" placeholder="John">
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" id="lastName" placeholder="Doe">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="email" placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+91 98765 43210">
+                </div>
+                <div class="form-group">
+                    <label>Service Interested In</label>
+                    <select id="service">
+                        <option value="">Select a service</option>
+                        <option>SEO</option>
+                        <option>Social Media Marketing</option>
+                        <option>Google Ads</option>
+                        <option>Web Development</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea id="message" placeholder="Tell us about your project..."></textarea>
+                </div>
+                <button class="submit-btn" onclick="handleSubmit()">Send Message</button>
+                <div class="success-msg" id="successMsg">
+                    &#10003; Thank you! We'll get back to you within 24 hours.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>&copy; 2025 <span>Jewel Jothi Tech</span>. All rights reserved. | Designed with &hearts; in Tamil Nadu</p>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
     <script>
+        // Services dropdown toggle
         function toggleMenu(event) {
             event.preventDefault();
-
             const menu = document.getElementById("servicesMenu");
             const arrow = document.getElementById("arrow");
-
             menu.classList.toggle("show");
             arrow.classList.toggle("rotate");
         }
 
-        document.addEventListener("click", function(event) {
+        // Close dropdown on outside click
+        document.addEventListener("click", function (event) {
             const dropdown = document.querySelector(".dropdown");
-
             if (!dropdown.contains(event.target)) {
-                document.getElementById("servicesMenu")
-                        .classList.remove("show");
-
-                document.getElementById("arrow")
-                        .classList.remove("rotate");
+                document.getElementById("servicesMenu").classList.remove("show");
+                document.getElementById("arrow").classList.remove("rotate");
             }
+        });
+
+        // Contact form submit
+        function handleSubmit() {
+            const firstName = document.getElementById("firstName").value.trim();
+            const email    = document.getElementById("email").value.trim();
+            const message  = document.getElementById("message").value.trim();
+
+            if (!firstName || !email || !message) {
+                alert("Please fill in at least your name, email, and message.");
+                return;
+            }
+
+            const successMsg = document.getElementById("successMsg");
+            successMsg.style.display = "block";
+
+            document.getElementById("firstName").value = "";
+            document.getElementById("lastName").value  = "";
+            document.getElementById("email").value     = "";
+            document.getElementById("phone").value     = "";
+            document.getElementById("service").value   = "";
+            document.getElementById("message").value   = "";
+
+            setTimeout(function () { successMsg.style.display = "none"; }, 5000);
+        }
+
+        // Active nav highlight on scroll
+        window.addEventListener("scroll", function () {
+            let current = "";
+            document.querySelectorAll("section").forEach(function (section) {
+                if (window.scrollY >= section.offsetTop - 100) {
+                    current = section.getAttribute("id") || "";
+                }
+            });
+            document.querySelectorAll("nav ul li a").forEach(function (link) {
+                link.style.color = "";
+                if (link.getAttribute("href") === "#" + current) {
+                    link.style.color = "#f5c518";
+                }
+            });
         });
     </script>
 
-    <h2 class="section-title">About Us</h2>
-
-    <p>Jewel Jothi Tech is a full-service digital marketing agency focused on helping businesses grow in the digital world. We provide comprehensive solutions including SEO, Social Media Marketing, Paid Advertising, Website Development, Graphic Design, and Data Analytics.
-        Our mission is to empower businesses with innovative marketing strategies that enhance brand visibility, generate quality leads, and drive sustainable growth. Whether you are a startup, small business, or established enterprise, we are committed to helping you reach your highest potential through effective digital solutions.</p>
-
-
-    <section class="different-section">
-
-    <div class="left-panel">
-
-        <h1>What Differentiates</h1>
-        <h2>Jewel Jothi Tech?</h2>
-
-        <p>
-            We help businesses grow through innovative digital marketing
-            strategies, creative solutions, and measurable results.
-            A few differentiating aspects of our company are listed below.
-        </p>
-
-        <img src="image/Image1.jpg" alt="About Us">
-
-    </div>
-
-    <div class="right-panel">
-
-        <div class="point">
-            <span>✓</span>
-            <p>We help businesses grow their online presence and attract more customers through result-driven marketing.</p>
-        </div>
-
-        <div class="point">
-            <span>✓</span>
-            <p>We provide SEO, Social Media Marketing, Google Ads, and Website Development services under one roof.</p>
-        </div>
-
-        <div class="point">
-            <span>✓</span>
-            <p>We believe in transparency, quality service, and measurable results for every project.</p>
-        </div>
-
-        <div class="point">
-            <span>✓</span>
-            <p>We build long-term partnerships by helping clients achieve sustainable growth.</p>
-        </div>
-
-        <div class="point">
-            <span>✓</span>
-            <p>Our team is always available to provide support, updates, and guidance.</p>
-        </div>
-
-        <div class="point">
-            <span>✓</span>
-            <p>We combine creativity, technology, and analytics to maximize business performance.</p>
-        </div>
-
-    </div>
-
-</section>
 </body>
 </html>
