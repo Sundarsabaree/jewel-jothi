@@ -12,7 +12,7 @@
     padding: 80px 40px 40px;
 
     /* Add these lines */
-    background-image: url('');
+    background-image: url('image\jewel jothy technologies.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -29,7 +29,11 @@ body {
     background-color: #0a0a0a;
     color: #f0f0f0;
     scroll-behavior: smooth;
+    box_sizing: border-box;
+    bodyground-image: url("image\jewel jothy technologies.jpeg");
+    background-size: cover;
 }
+
 
 /* ========== NAVBAR ========== */
 nav {
@@ -39,9 +43,9 @@ nav {
     padding: 18px 60px;
     background-color: #0a0a0a;
     position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #1e1e1e;
+    top: 1px;
+    z-index: 10000;
+    border-bottom: 10px solid #1e1e1e;
 }
 
 nav h1 {
