@@ -1,88 +1,292 @@
+/* ============================================================
+   Jewel Jothi Tech — Login / Register Styles
+   Theme: Black · Yellow (#F5C518) · White
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --yellow:      #F5C518;
+  --yellow-hov:  #FFD84D;
+  --yellow-glow: rgba(245, 197, 24, 0.22);
+  --black:       #0a0a0a;
+  --white:       #ffffff;
+  --gray:        #888;
+  --gray-lt:     #ccc;
+  --red:         #ff4d4d;
+  --green:       #28c76f;
+}
+
+/* ── BODY ─────────────────────────────────────────────────── */
 body {
-    background-image: url("image/background.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;  /* card sits LEFT */
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+  /* Background: place your startup photo as startup-bg.jpg */
+  background: url('startup-bg.jpg') center center / cover no-repeat fixed;
+  background-color: #1a1a1a;
+  position: relative;
+  padding: 2rem;
 }
 
-/* Website Title */
-h1 {
-    text-align: center;
-    color:gold;
-    font-size: 55px;
-    margin-top: 10px;
-
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+/* ── DARK OVERLAY ─────────────────────────────────────────── */
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.48);
+  z-index: 0;
 }
 
-/* Login Box */
-form {
-    background-color:color;
-
-    width: 400px;
-
-    padding: 40px;
-
-    border-radius: 15px;
-
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
-
-    position: absolute;
-
-    right: 80px;
-
-    top: 140px;
+/* ── SITE TITLE (top-center) ──────────────────────────────── */
+.site-title {
+  position: fixed;
+  top: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: 900;
+  color: var(--yellow);
+  white-space: nowrap;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.8);
+  letter-spacing: -0.5px;
 }
 
-/* Login Heading */
-h2 {
-    text-align: center;
-    color: #333;
-    margin-top: 0;
-    margin-bottom: 25px;
+/* ── GLASS CARD ───────────────────────────────────────────── */
+.glass-card {
+  position: relative;
+  z-index: 5;
+  margin-left: 4vw;       /* left-side placement */
+  width: 100%;
+  max-width: 420px;
+  background: rgba(8, 8, 8, 0.78);
+  border: 1px solid rgba(245, 197, 24, 0.28);
+  border-radius: 20px;
+  padding: 2.4rem 2rem 2rem;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0 8px 48px rgba(0,0,0,0.55);
+  transition: min-height 0.5s ease;
 }
 
-/* Input Fields */
-input {
-    width: 100%;
-
-    padding: 12px;
-
-    margin-bottom: 15px;
-
-    border: 1px solid #ccc;
-
-    border-radius: 5px;
-
-    font-size: 16px;
-
-    box-sizing: border-box;
+/* ── PANEL SWITCH ANIMATION ───────────────────────────────── */
+.panel {
+  animation: fadeIn 0.4s ease;
 }
 
-/* Login Button */
-button {
-    width: 100%;
-
-    background-color: #007BFF;
-
-    color: white;
-
-    border: none;
-
-    padding: 12px;
-
-    border-radius: 5px;
-
-    cursor: pointer;
-
-    font-size: 16px;
+.panel.hidden {
+  display: none;
 }
 
-button:hover {
-    background-color: #0056b3;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* ── PANEL TITLE ──────────────────────────────────────────── */
+.panel-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 1.4rem;
+  letter-spacing: -0.2px;
+}
+
+/* ── ALERTS ───────────────────────────────────────────────── */
+.alert {
+  display: none;
+  padding: 0.65rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.84rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  line-height: 1.45;
+}
+
+.alert-error {
+  background: rgba(255, 77, 77, 0.12);
+  border: 1px solid rgba(255, 77, 77, 0.35);
+  color: #ff6b6b;
+}
+
+.alert-success {
+  background: rgba(40, 199, 111, 0.12);
+  border: 1px solid rgba(40, 199, 111, 0.32);
+  color: #28c76f;
+}
+
+/* ── FIELD GROUP ──────────────────────────────────────────── */
+.field-group {
+  margin-bottom: 1rem;
+}
+
+.field-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gray-lt);
+  margin-bottom: 0.38rem;
+  letter-spacing: 0.2px;
+}
+
+/* Two fields side by side (first + last name) */
+.row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+/* ── INPUT WRAP ───────────────────────────────────────────── */
+.input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.fi {
+  position: absolute;
+  left: 11px;
+  font-size: 0.9rem;
+  color: var(--gray);
+  pointer-events: none;
+  line-height: 1;
+}
+
+.input-wrap input {
+  width: 100%;
+  padding: 0.78rem 2.4rem 0.78rem 2.2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1.5px solid transparent;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #111;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-wrap input::placeholder { color: #aaa; }
+
+.input-wrap input:focus {
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 3px var(--yellow-glow);
+}
+
+/* Eye icon */
+.eye {
+  position: absolute;
+  right: 11px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--gray);
+  user-select: none;
+  transition: color 0.2s;
+}
+
+.eye:hover { color: var(--yellow); }
+
+/* ── FIELD ERROR TEXT ─────────────────────────────────────── */
+.field-err {
+  display: block;
+  font-size: 0.76rem;
+  color: #ff6b6b;
+  margin-top: 0.3rem;
+  min-height: 1rem;
+}
+
+/* ── PRIMARY BUTTON ───────────────────────────────────────── */
+.btn-primary {
+  width: 100%;
+  padding: 0.85rem;
+  margin-top: 0.4rem;
+  background: var(--yellow);
+  color: #111;
+  border: none;
+  border-radius: 9px;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: background 0.2s, transform 0.15s, opacity 0.2s;
+}
+
+.btn-primary:hover  { background: var(--yellow-hov); }
+.btn-primary:active { transform: scale(0.98); }
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Loading spinner inside button */
+.btn-primary.loading::after {
+  content: ' ⟳';
+  display: inline-block;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ── SWITCH TEXT ──────────────────────────────────────────── */
+.switch-text {
+  text-align: center;
+  font-size: 0.84rem;
+  color: var(--gray);
+  margin-top: 1.2rem;
+}
+
+.switch-text a {
+  color: var(--yellow);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.switch-text a:hover {
+  color: var(--yellow-hov);
+  text-decoration: underline;
+}
+
+/* ── SHAKE ANIMATION ──────────────────────────────────────── */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-6px); }
+  40%       { transform: translateX(6px); }
+  60%       { transform: translateX(-4px); }
+  80%       { transform: translateX(4px); }
+}
+
+.shake { animation: shake 0.4s ease; }
+
+/* ── RESPONSIVE ───────────────────────────────────────────── */
+@media (max-width: 600px) {
+  body {
+    justify-content: center;
+    padding: 1rem;
+    align-items: flex-end;
+    padding-bottom: 2rem;
+  }
+
+  .glass-card {
+    margin-left: 0;
+    max-width: 100%;
+    padding: 2rem 1.4rem 1.8rem;
+  }
+
+  .site-title { font-size: 1.5rem; }
+
+  .row-2 { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 360px) {
+  .glass-card { padding: 1.6rem 1.1rem 1.5rem; }
 }

@@ -1,55 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Jewel Jothi Tech Login</title>
-    <link rel="stylesheet" href="index.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jewel Jothi Tech — Login</title>
+  <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-    <title>Register & Login</title>
-    <h1>Jewel Jothi Tech</h1>
-       <div class="container" id="signup">
 
-        <form method="post" action="">
-          <h2 class="form-title">Register</h2>
-           <div class="input-group">
-            <i class="fas fa-user"></i>
-            <input type="text" name="fName" id="fName" placeholder="First Name" required>
-            
-            </div>
-            <div class="input-group">
-            <i class="fas fa-user"></i>
-            <input type="text" name="lName" id="lName" placeholder="last Name" required>
-            <Label for="lName">Last name</Label>
-            </div>
-            <i class="fas fa-envelope"></i>
-            input type="email" name="email" id="email" placeholder="Email" required>
-            <label for="email">Email</label>
-            </div>
-             <div class="input-group">
-            <i class="fas fa-lock"></i>
-            <input type="password" name="password" id="password" placeholder="Password" required>
-            </div>
-        
-              
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-            <input type="email" name="email" id="email" placeholder="Email" required>
-            <input type="password" name="password" id="password" placeholder="Password" required>
-            <a href="home.html">
-                <button type="button">Sign Up</button>
-            </a>
-    <form>
-        
+  <!-- Full-screen background -->
+  <div class="bg-overlay"></div>
 
-        
+  <!-- Site title top-center -->
+  <h1 class="site-title">Jewel Jothi Tech</h1>
 
-    </form>
+  <!-- Glass card — left side -->
+  <div class="glass-card" id="glassCard">
 
+    <!-- ════════════ LOGIN PANEL ════════════ -->
+    <div class="panel" id="loginPanel">
+      <h2 class="panel-title">Sign In</h2>
+
+      <div class="alert alert-error"   id="loginError"></div>
+      <div class="alert alert-success" id="loginSuccess"></div>
+
+      <div class="field-group">
+        <label>Email Address</label>
+        <div class="input-wrap">
+          <span class="fi">&#9993;</span>
+          <input type="email" id="loginEmail" placeholder="you@example.com" autocomplete="email">
+        </div>
+        <span class="field-err" id="loginEmailErr"></span>
+      </div>
+
+      <div class="field-group">
+        <label>Password</label>
+        <div class="input-wrap">
+          <span class="fi">&#128274;</span>
+          <input type="password" id="loginPassword" placeholder="Your password" autocomplete="current-password">
+          <span class="eye" id="loginEye" onclick="togglePw('loginPassword','loginEye')">&#128065;</span>
+        </div>
+        <span class="field-err" id="loginPasswordErr"></span>
+      </div>
+
+      <button class="btn-primary" id="loginBtn" onclick="submitLogin()">Sign In</button>
+
+      <p class="switch-text">
+        Don't have an account?
+        <a href="#" onclick="switchTo('register')">Sign Up</a>
+      </p>
+    </div>
+
+    <!-- ════════════ REGISTER PANEL ════════════ -->
+    <div class="panel hidden" id="registerPanel">
+      <h2 class="panel-title">Create Account</h2>
+
+      <div class="alert alert-error"   id="regError"></div>
+      <div class="alert alert-success" id="regSuccess"></div>
+
+      <div class="row-2">
+        <div class="field-group">
+          <label>First Name</label>
+          <div class="input-wrap">
+            <span class="fi">&#128100;</span>
+            <input type="text" id="regFirst" placeholder="First name" autocomplete="given-name">
+          </div>
+          <span class="field-err" id="regFirstErr"></span>
+        </div>
+
+        <div class="field-group">
+          <label>Last Name</label>
+          <div class="input-wrap">
+            <span class="fi">&#128100;</span>
+            <input type="text" id="regLast" placeholder="Last name" autocomplete="family-name">
+          </div>
+          <span class="field-err" id="regLastErr"></span>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>Email Address</label>
+        <div class="input-wrap">
+          <span class="fi">&#9993;</span>
+          <input type="email" id="regEmail" placeholder="you@example.com" autocomplete="email">
+        </div>
+        <span class="field-err" id="regEmailErr"></span>
+      </div>
+
+      <div class="field-group">
+        <label>Password</label>
+        <div class="input-wrap">
+          <span class="fi">&#128274;</span>
+          <input type="password" id="regPassword" placeholder="Min. 6 characters">
+          <span class="eye" id="regEye" onclick="togglePw('regPassword','regEye')">&#128065;</span>
+        </div>
+        <span class="field-err" id="regPasswordErr"></span>
+      </div>
+
+      <div class="field-group">
+        <label>Confirm Password</label>
+        <div class="input-wrap">
+          <span class="fi">&#128274;</span>
+          <input type="password" id="regConfirm" placeholder="Repeat password">
+        </div>
+        <span class="field-err" id="regConfirmErr"></span>
+      </div>
+
+      <button class="btn-primary" id="regBtn" onclick="submitRegister()">Create Account</button>
+
+      <p class="switch-text">
+        Already have an account?
+        <a href="#" onclick="switchTo('login')">Sign In</a>
+      </p>
+    </div>
+
+  </div><!-- /glass-card -->
+
+  <script src="Script.js"></script>
 </body>
-
 </html>
-
