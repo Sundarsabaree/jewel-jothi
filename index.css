@@ -1,8 +1,4 @@
-/* ============================================================
-   Jewel Jothi Tech — Login / Register Styles
-   Theme: Black · Yellow (#F5C518) · White
-   ============================================================ */
-
+/* ============================================================ */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -21,7 +17,7 @@
   --green:       #28c76f;
 }
 
-/* ── BODY ─────────────────────────────────────────────────── */
+/* ── BODY (single merged rule) ───────────────────────────────── */
 body {
   min-height: 100vh;
   display: flex;
@@ -29,11 +25,17 @@ body {
   justify-content: flex-start;  /* card sits LEFT */
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 
-  /* Background: place your startup photo as startup-bg.jpg */
-  background: url('startup-bg.jpg') center center / cover no-repeat fixed;
-  background-color: #1a1a1a;
-  position: relative;
+  margin: 0;
   padding: 2rem;
+  position: relative;
+
+  /* Background image */
+  background-image: url("image/background.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #1a1a1a; /* fallback while image loads / if it fails */
 }
 
 /* ── DARK OVERLAY ─────────────────────────────────────────── */
