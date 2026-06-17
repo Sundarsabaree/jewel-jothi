@@ -5,18 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jewel Jothi Technologies - Home</title>
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="">
 
-    <!-- External CSS -->
     <link rel="stylesheet" href="mystyle.css">
 </head>
 
 <body>
 
-    <!-- ===== NAVBAR ===== -->
     <nav>
-        <img src=""alt="" class="">
+        <img src="" alt="" class="">
         <h1>JewelJothi Technologies</h1>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -38,7 +35,6 @@
         </ul>
     </nav>
 
-    <!-- ===== HERO SECTION ===== -->
     <section id="home">
         <h2>Grow Your Business With <span>Digital Marketing</span></h2>
         <p>Digital Marketing & Performance Marketing Agency</p>
@@ -48,13 +44,11 @@
         </div>
     </section>
 
-    <!-- Scroll Down -->
     <div class="scroll-down">
         <span>Scroll Down</span>
         <i class="fa-solid fa-arrow-down"></i>
     </div>
 
-    <!-- ===== TICKER ===== -->
     <div class="ticker">
         <div class="ticker-content">
             JEWEL JOTHI TECH &bull; DIGITAL MARKETING &bull; SEO &bull; SMM &bull; GOOGLE ADS &bull; WEBSITE DEVELOPMENT &bull; ANALYTICS &bull;
@@ -62,7 +56,6 @@
         </div>
     </div>
 
-    <!-- ===== WHAT DIFFERENTIATES ===== -->
     <section class="different-section">
         <div class="left-panel">
             <h1>What Differentiates</h1>
@@ -98,7 +91,6 @@
         </div>
     </section>
 
-    <!-- ===== ABOUT SECTION ===== -->
     <section id="about">
         <p class="section-label">Who We Are</p>
         <h2 class="section-title">About Us</h2>
@@ -112,7 +104,6 @@
             business, or established enterprise, we are committed to helping you reach your highest potential.
         </p>
 
-        <!-- Stats -->
         <div class="stats-row">
             <div class="stat-box">
                 <h3>150+</h3>
@@ -132,7 +123,6 @@
             </div>
         </div>
 
-        <!-- Services Grid -->
         <p class="section-label">What We Offer</p>
         <h2 class="section-title">Our Services</h2>
         <br>
@@ -160,7 +150,13 @@
         </div>
     </section>
 
-    <!-- ===== CONTACT SECTION ===== -->
+    <section id="courses" style="text-align: center; padding: 60px 20px;">
+        <button class="btn-primary" onclick="showDetails()">
+            View Course Details
+        </button>
+        <div id="courseDetails" style="margin-top: 20px;"></div>
+    </section>
+
     <section id="contact">
         <p class="section-label">Get In Touch</p>
         <h2 class="section-title">Contact Us</h2>
@@ -168,7 +164,6 @@
 
         <div class="contact-wrapper">
 
-            <!-- Contact Info -->
             <div class="contact-info">
                 <h3>Let's Work Together</h3>
                 <p>Ready to take your business to the next level? Reach out to us and we'll get back to you within 24 hours.</p>
@@ -198,7 +193,6 @@
                 </div>
             </div>
 
-            <!-- Contact Form -->
             <div class="contact-form">
                 <div class="form-row">
                     <div class="form-group">
@@ -242,12 +236,10 @@
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
     <footer>
         <p>&copy; 2025 <span>Jewel Jothi Tech</span>. All rights reserved. | Designed with &hearts; in Tamil Nadu</p>
     </footer>
 
-    <!-- ===== JAVASCRIPT ===== -->
     <script>
         // Services dropdown toggle
         function toggleMenu(event) {
@@ -306,6 +298,12 @@
                 }
             });
         });
+
+        // Dynamic Course Details display
+        function showDetails() {
+            document.getElementById("courseDetails").innerHTML = "<h2>Course Structure</h2><p>This course covers SEO, SMM, Google Ads, and Web Development. It is designed for beginners and includes hands-on projects.<p/><p>Course 1 - 15 days mini course - 12,000 fees 1 certificate for social media marketing. Course Syllabus- 1. Social Media management 2. Paid campaigns strategies 3. Competitor Analysis 4. Basic AI tools 5. Basics of Seo</p><p>2. Course 2 - 45 days Professional course - 25,000 fees with 3 certificates for Smm, Seo and Advanced Analytics 1 week free  interview guidance 1 month free internship with our company and certificate. If performs well permanent job. Syllabus - 1. Social Media management 2. Paid campaign management 3. Advanced Seo 4. Email marketing 5. Competitor Analysis 6. Google Analytics</p>"; 
+                
+}
     </script>
 
 </body>
