@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing Plans | JewelJothi Technologies</title>
+<style>
+  /* ===== GLOBAL ===== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #0d0d0d;
+    color: #f5f5f5;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  /* ===== NAVBAR ===== */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #0d0d0d;
+    border-bottom: 1px solid #2a2a2a;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #f5c518;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+  }
+
+  .nav-links a {
+    color: #f5f5f5;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: #f5c518;
+  }
+
+  /* ===== PAGE TITLE ===== */
+  .page-title {
+    text-align: center;
+    padding: 60px 20px 30px;
+  }
+
+  .page-title h1 {
+    font-size: 2.6rem;
+    color: #f5c518;
+    margin-bottom: 10px;
+  }
+
+  .page-title p {
+    color: #bbbbbb;
+    font-size: 1.1rem;
+  }
+
+  /* ===== PRICING SECTION ===== */
+  .pricing-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 60px 80px;
+  }
+
+  .pricing-card {
+    background-color: #161616;
+    border: 1px solid #2a2a2a;
+    border-radius: 14px;
+    padding: 40px 30px;
+    width: 320px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-8px);
+    border-color: #f5c518;
+  }
+
+  .pricing-card.featured {
+    border-color: #f5c518;
+    background-color: #1c1606;
+    transform: scale(1.04);
+  }
+
+  .badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f5c518;
+    color: #0d0d0d;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 5px 16px;
+    border-radius: 20px;
+  }
+
+  .plan-name {
+    font-size: 1.6rem;
+    color: #f5c518;
+    margin-bottom: 8px;
+  }
+
+  .plan-duration {
+    color: #999;
+    font-size: 0.95rem;
+    min-height: 20px;
+    margin-bottom: 10px;
+  }
+
+  .plan-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    min-height: 36px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #2a2a2a;
+    padding-bottom: 20px;
+  }
+
+  .plan-features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .plan-features li {
+    padding: 8px 0;
+    color: #d9d9d9;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #1f1f1f;
+  }
+
+  .plan-btn {
+    display: inline-block;
+    background-color: #f5c518;
+    color: #0d0d0d;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .plan-btn:hover {
+    background-color: #ffffff;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid #2a2a2a;
+    color: #999;
+    font-size: 0.9rem;
+  }
+
+  .footer p {
+    margin: 4px 0;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      gap: 15px;
+      padding: 20px;
+    }
+    .nav-links {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+    }
+    .pricing-section {
+      padding: 30px 20px 60px;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="logo">JewelJothi Technologies</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#courses">Courses</a></li>
+        <li><a href="pricing.html" class="active">Pricing</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE TITLE ===== -->
+  <section class="page-title">
+    <h1>Our Pricing Plans</h1>
+    <p>Choose the plan that fits your business growth</p>
+  </section>
+
+  <!-- ===== PRICING CARDS ===== -->
+  <section class="pricing-section">
+
+    <!-- STANDARD PLAN -->
+    <div class="pricing-card">
+      <h2 class="plan-name">Standard</h2>
+      <p class="plan-duration"><!-- e.g. 3 Month Plan --></p>
+      <div class="plan-price"><!-- Add amount here --></div>
+      <ul class="plan-features">
+        <li>40 Posters, 20 Reels</li>
+        <li>Social Media Marketing</li>
+        <li>Brand Visibility</li>
+        <li>AD Management</li>
+        <li>Festival Wishes</li>
+        <li>Content Creation</li>
+        <li>Marketing Strategy</li>
+        <li>Performance Report</li>
+        <li>Instant Communication</li>
+        <li>Social Media Page Handling</li>
+      </ul>
+      <a href="index.html#contact" class="plan-btn">Get Started</a>
+    </div>
+
+    <!-- GROWTH PLAN -->
+    <div class="pricing-card featured">
+      <span class="badge">Most Popular</span>
+      <h2 class="plan-name">Growth</h2>
+      <p class="plan-duration"><!-- e.g. 3 Month Plan --></p>
+      <div class="plan-price"><!-- Add amount here --></div>
+      <ul class="plan-features">
+        <li>60 Posters, 40 Reels</li>
+        <li>Social Media Marketing</li>
+        <li>Brand Visibility</li>
+        <li>AD Management</li>
+        <li>Festival Wishes</li>
+        <li>Facebook and Instagram Marketing</li>
+        <li>Marketing Strategy</li>
+        <li>Performance Report</li>
+        <li>Instant Communication</li>
+        <li>Social Media Page Handling</li>
+        <li> Local SEO</li>
+      </ul>
+      <a href="index.html#contact" class="plan-btn">Get Started</a>
+    </div>
+
+    <!-- PREMIUM PLAN -->
+    <div class="pricing-card">
+      <h2 class="plan-name">Premium</h2>
+      <p class="plan-duration"><!-- e.g. 3 Month Plan --></p>
+      <div class="plan-price"><!-- Add amount here --></div>
+      <ul class="plan-features">
+        <li>70 Posters, 50 Reels</li>
+        <li>Target Audience Visibility</li>
+        <li>AD Management</li>
+        <li>Festival Wishes</li>
+        <li>Facebook and Instagram Marketing</li>
+        <li>Marketing Strategy</li>
+        <li>Performance Report</li>
+        <li>Instant Communication</li>
+        <li>Website Ranking</li>
+        <li>Search Engine Optimization</li>
+      </ul>
+      <a href="index.html#contact" class="plan-btn">Get Started</a>
+    </div>
+
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>Smartspaces, 1st Floor, 57-A, KS Ramasamy St, Saibaba Colony, Kuppakonam Pudur, Coimbatore - 641007</p>
+    <p>9944992062 | 9944992064 | 87543 43933</p>
+    <p>jeweljothi.technologies</p>
+  </footer>
+
+</body>
+</html>
