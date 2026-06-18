@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf5babed-ce49-4195-8d9b-c07408133efc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dashboard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +64,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\VICTUS\PycharmProjects\jewel-jothi\image" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\VICTUS\PycharmProjects\jewel-jothi" />
     </key>
   </component>
   <component name="SharedIndexes">

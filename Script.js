@@ -109,7 +109,7 @@ function submitLogin() {
     if (data.success) {
       showAlert('loginSuccess', '✔ ' + data.message + ' Redirecting…');
       setTimeout(function() {
-        window.location.href = data.redirect || 'dashboard.php';
+        window.location.href = data.redirect || 'Home.html';
       }, 1200);
     } else {
       showAlert('loginError', data.message || 'Login failed. Please try again.');
